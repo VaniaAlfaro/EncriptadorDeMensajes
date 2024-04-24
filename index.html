@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Encriptador de Texto</title>
+    </head>
+
+    <body>
+
+        <p id="textcopied" class="notification--off">¡Texto copiado!</p>
+        <p id="rulesadvice" class="notification--off">El texto no debe contener mayúsculas ni caracteres especiales.</p>
+
+        <header>
+            <img src="Img/Logo_Alura.png" id="Logo_Alura">
+            <p id="titulo">Descubre el mensaje oculto en tú mensaje.</p>
+        </header>
+
+        <main>
+            <div id="leftbox">
+                <textarea id="lefttext" placeholder="Escribe un texto..."></textarea>
+                <input id="encrypt" class="button" type="button" value="Encriptar">
+                <input id="decrypt" class="button" type="button" value="Desencriptar">
+            </div>
+            <div id="rightbox">
+                <textarea id="righttext" readonly></textarea>
+                <p id="textnotfound"><span>Ningún mensaje fue encontrado<br><br></span>Ingresa el texto que desees encriptar o desencriptar.</p>
+                <div id="buttons">
+                    <input id="copy" class="button" type="button">
+                    <input id="clear" class="button" type="button">
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <img src="Img/Logo_Alura.png" class="logo_footer">
+            <p class="mensaje">&copy Copyright Encriptador de Texto - 2023</p>
+        </footer>   
+
+        <script src="app.js"></script>
+
+    </body>
+
+</html>
+

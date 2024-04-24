@@ -1,0 +1,187 @@
+/* - - - - - V A R I A B L E S - - - - - */
+@font-face{
+	font-family: poppins-bold;
+	src: url("../assets/fonts/Poppins/Poppins-Bold.ttf");
+}
+@font-face{
+	font-family: poppins;
+	src: url("../assets/fonts/Poppins/Poppins-Light.ttf");
+}
+
+:root
+{
+	--gap: 20px;
+	--icon: 2rem;
+	--padding: 10px;
+	--radius: 15px;
+}
+
+body
+{
+	font-family: poppins;
+	background-color: lightgray;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap);
+	justify-content: space-around;
+	padding: var(--padding) calc(var(--gap) * 2);
+	position: relative;
+}
+#Logo_Alura
+{
+	width: 40px;
+    text-align: left;
+    display: inline-block
+}
+#titulo
+{
+    font-size: 30px;
+    font-weight: bold;
+    color:#000;
+    display: inline-block;
+    margin-left: 320px;
+    
+}
+textarea
+{
+	background-color: transparent;
+	border: none;
+	outline: none;
+	padding: calc(var(--padding) + var(--icon));
+	resize: none;
+	width: 100%;
+}
+.button
+{
+	border-radius: 0;
+	border: none;
+	height: var(--icon);
+}
+.notification--off
+{
+	border-radius: calc(var(--radius) * 5);
+	padding: var(--padding) calc(var(--padding) * 2);
+	position: absolute;
+	text-align: center;
+	bottom: 100%;
+	transition: .3s linear;
+}
+.notification--on
+{
+	bottom: 95%;
+}
+#textcopied{
+	background-color: lightgreen;
+}
+#rulesadvice
+{
+	background-color: red;
+}
+
+main
+{
+	display: flex;
+	flex-grow: 1;
+	max-height: 700px;
+	width: 100%;
+	gap: calc(var(--gap) * 2);
+}
+main .button
+{
+	background-color: white;
+}
+main #leftbox, main #rightbox
+{
+	background-color: white;
+	flex: 1;
+	border-radius: var(--radius);
+	overflow: hidden;
+	color: black;
+}
+main #leftbox
+{
+	display: grid;
+	grid-template-areas: "lefttext lefttext"
+						 "encrypt  decrypt";
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr auto auto;
+}
+main #leftbox #lefttext{
+	grid-area: lefttext;
+}
+main #leftbox #encrypt{
+	grid-area: encrypt;
+}
+main #leftbox #decrypt{
+	grid-area: decrypt;
+}
+main #leftbox #advice{
+	grid-area: advice;
+}
+main #encrypt:hover, main #decrypt:hover{
+	background-color: #000;
+	color: white;
+	transition: .5s;
+    border-radius: 5px;
+}
+main #rightbox
+{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+main #rightbox #righttext{
+	background-image: url("../assets/images/nottext.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto;
+	flex-grow: 1;
+	padding-bottom: 0;
+}
+main #rightbox #buttons > *{
+	aspect-ratio: 1;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+main #rightbox #buttons #copy{
+	background-image: url("../assets/icons/copy.svg");	
+}
+main #rightbox #buttons #clear{
+	background-image: url("../assets/icons/clear.svg");
+}
+main #rightbox #buttons{
+	display: none;
+	flex-direction: column;
+	gap: var(--gap);
+	position: absolute;
+	right: var(--padding);
+	top: var(--padding);
+}
+main #rightbox #textnotfound{
+	flex-basis: 25%;
+	padding-top: 0;
+	padding: calc(var(--padding) + var(--icon));
+	text-align: center;
+}
+main #rightbox #textnotfound span{
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+
+footer
+{
+    text-align: center;
+    padding: 15px;
+    background: #000;
+    color:white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.logo_footer
+{
+    width: 30px;
+}
+
+
